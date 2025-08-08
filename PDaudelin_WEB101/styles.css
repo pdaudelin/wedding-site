@@ -1,0 +1,356 @@
+html {
+    background-color: var(--bg-color);
+    scroll-padding-top: 100px;
+}
+
+/*** body ***/
+
+body {
+    /* Add a background color or image */
+    background-color: var(--bg-color); /* see bottom of file for color variables */
+
+    /* Customizes the default size, color, and font for text */
+    font-size: 16px;
+    color: var(--text-color);
+    font-family: Tahoma, sans-serif; 
+
+    /* Put space around the edges of the webpage */
+    margin: 50px;
+    padding-top:50px;
+}
+
+/*** Text ***
+  
+  Purpose: 
+  - Adds style rules for headings (h1-6),
+    paragraphs (p), links (a), and buttons
+
+***/
+
+h1{
+    padding-top: 25px;
+    padding-bottom:15px;
+    font-style: italic;
+    font-size: 80px;
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+    color: #1d1d4d;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* soft shadow */
+}
+
+h2 {
+    background-color:  #B0D5C0;
+    padding-top: 10px;
+    font-size: 42px;
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+    color: #1d1d4d;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* soft shadow */
+}
+
+h3 {
+    font-family: 'Lora', serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+
+h4 {
+    font-family: 'Lora', serif;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+p,
+li {
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #6f7275;
+    margin-bottom: 1.2em;
+}
+
+button {
+  background-color: rgb(244, 149, 149);
+  color: white;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: rgb(238, 115, 115); /* slightly deeper shade */
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+a:link {
+  color: #9b59b6; /* soft purple */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+a:visited {
+  color: #7e4fa3; /* slightly darker purple */
+}
+
+a:hover {
+  color: #6c3483; /* deeper shade on hover */
+  text-decoration: underline;
+}
+
+a:active {
+  color: #4a235a; /* darkest purple */
+}
+
+
+/*** header ***
+  
+  Purpose:
+  - Adds style rules for the header section
+
+***/
+
+.header-container {
+  padding-top: 20px;
+  margin-bottom: 25px;
+  text-align: center;
+  display:flex;
+  justify-content:center;
+  flex-direction: column;
+}
+
+/* Image in the header */
+#header-img {
+  width: 70px;
+  max-width: 80px;
+  margin-left: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.event-container{
+  display:flex;
+  justify-content: center;
+  gap: 40px;
+
+}
+
+.event-card{
+  padding: 20px;
+  background-color:#FFE8E0;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 250px; /* Set a fixed width */
+  flex-shrink: 0; /* Prevent shrinking */
+  flex-grow: 0;   /* Prevent growing */
+  color: #aa6c6c; /* A muted rose tone */
+  font-weight: 500;
+
+  transition: all 0.3s ease-in-out;
+}
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+
+}
+.event-card:active{
+  transform: translateY(0);
+}
+
+/*** Navigation bar (navbar) ***
+  
+  Purpose:
+  - Adds style rules for the navbar
+
+***/
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    list-style-type: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(242, 136, 136, 0.85);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar ul li {
+    margin: 8px;
+}
+
+.navbar ul li a,
+.navbar ul li button {
+    padding: 10px 15px;
+    display: block;
+}
+
+.navbar ul li a:hover {
+    border-radius: 4px;
+}
+
+
+/*** RSVP Section ***
+  
+  Purpose:
+  - Adds style rules for the RSVP form
+
+***/
+
+.rsvp-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.rsvp-para {
+  width: 55%;
+  padding-right: 10px;
+}
+
+.rsvp-particpants {
+  width: 45%;
+  padding-right: 10px;
+}
+
+#rsvp-form {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 20px;
+  flex-direction: row;
+}
+
+
+.error {
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+  background-color:#f8bbd0;
+}
+
+/*** Success Modal  ***
+  
+  Purpose:
+  - Adds style rules to the pop-up modal, which appears
+    when a user successfully submits the RSVP form
+
+***/
+
+.modal {
+  display: none;   /* modal should be hidden by default*/
+  opacity: 0;
+  transition: opacity 0.4s ease; /* smooth fade */
+  pointer-events: none;
+  position: fixed; /* modal cannot move around the screen */
+  z-index: 2;      /* modal appears above other elements */ 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Adds a semi-transparent background to shadow non-modal elements*/
+  background-color: rgba(0,0,0,0.4); /* 40% opacity black */
+
+  /* Flexbox settings for modal */
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-container {
+    padding: 50px;
+    width: 55%;
+
+    background-color: rgb(229, 180, 213);
+    text-align: center;
+    font-family: 'Parisienne', serif;
+    font-size: 2rem;
+    color: #7a5c61; /* soft romantic tone */
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 25px;
+    padding-top: 40px;
+
+}
+
+.modal.show {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* Adds style to button */
+#theme-button {
+  background-color: rgb(243, 105, 105);
+  border-radius: 8px;
+  cursor: pointer;
+
+}
+
+/* Dark mode style */
+.dark-mode {
+    margin: 0px;
+    padding-left: 50px;
+    padding-right:50px;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    background-color: #3e3377;
+    color:var(--text-color-dark-mode);
+    
+}
+
+.dark-mode .dark {
+    color:var(--text-color-dark-mode);
+}
+
+
+:root {
+    /* Light Mode */
+    --bg-color: #fbf9ea;
+    --text-color: #6f7275;
+
+    /* Dark Mode */
+    --bg-color-dark-mode: #3e3377;
+    --text-color-dark-mode: #fff;
+
+    /* Accent Colors */
+    --accent-color-light: #d2cff5;
+    --accent-color-medium: #684fb5;
+    --accent-color-dark: #482f95;
+    --accent-color-darkest: #231942;
+    --accent-color-green: #28eb76;
+
+    /* Error Colors */
+    --error-color: #f8bbd0;
+    --error-color-border: #e63946;
+}
+

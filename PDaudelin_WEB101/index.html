@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="img/5307639.png">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&family=Lora&family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+        <title>Forever -- Timothy & Amber's Wedding</title>
+    </head>
+    
+    <body>
+    
+        
+    <!-- navbar
+
+    Purpose:
+    - Navigation bar that allows users to jump to different sections of the webpage
+    - Also holds buttons for user settings (dark mode)
+
+    -->
+    <div class="navbar">
+        <ul>
+        <li><a href="#about">About the Event</a></li>
+        <li><a href="#schedule">Event Schedule</a></li>
+        <li><a href="#links">Links</a></li>
+         <li><button id="theme-button">Toggle Dark Mode</button></li>
+        </ul>
+    </div>
+
+
+    <!-- headings
+
+    Purpose:
+    - Main header section of the webpage
+    - Contains the title, subtitle, image, and key buttons for the webpage
+
+    -->
+    <div class="header-container">
+        <div>
+            <img id="header-img" src="./img/5307639.png"/>
+        </div>
+            
+        <h1 class="dark">Timothy & Amber - Forever</h1>
+            
+        <div class="header-button">
+            <button>RSVP</button>
+            <button>Gift Registry</button>
+        </div>
+    </div>
+        
+
+        
+        <!-- about
+
+        Purpose:
+        - Section for general info about the event
+        - Contains a description and key points about the event
+
+        --> 
+        <h2 id="about">About the Event</h2>
+        <p class="dark">Timothy and Amber are thrilled to invite you to celebrate their wedding, a joyful union of two hearts brought together by pure love. This special event will be filled with laughter, memories, and cherished moments shared with family and friends. The ceremony and reception are designed for loved ones from all walks of life to gather and rejoice with the bride and groom. Your presence will make this day truly unforgettable.</p>
+
+        <h3>Things to remember:</h3>
+        <ul>
+            <li class="dark"> <b>Arrival:</b> <i>Make sure to arrive by 10:45</i></li>
+            <li class="dark"> <b>Ceremony:</b> <i>Ceremony begins at 11:00 AM and ends at 12:30 PM</i></li>
+            <li class="dark"> <b>Photos:</b> <i>Make sure to upload photos to the Photo Album for the couple to enjoy!</i></li>
+        </ul>
+
+        <!-- schedule
+
+        Purpose:
+        - Section for specific info about the event's schedule
+        - Contains images and descriptions of each activity
+
+        --> 
+        <h2 id="schedule">Event Schedule</h2>
+        <div class="event-container">
+            <div class="event-card">
+                <img alt="Couple at altar" src="/img/altar.jpeg" width="250px" />
+                <h3>Ceremony</h3>
+                <p>The ceremony will be held at 11:00 AM at Calvary Evangelical Free Church, Essex Fells, NJ</p>
+            </div>
+            <div class="event-card">
+                <img alt="Bride and Groom having a toast" src="/img/sparklers.jpeg" width="250px"/>
+                <h3>Reception</h3>
+                <p>A dinner and reception will be held at 2:00 PM at Linward Barn, Princeton, NJ</p>
+            </div>
+            <div class="event-card">
+                <img alt="Man holding Bride" src="./img/holding.jpeg" width="250px"/>
+                <h3>Send Off</h3>
+                <p>The sendoff will occur at 8:30 PM. Sparklers will be provided.</p>
+            </div>
+        </div>
+
+
+
+    <!-- rsvp
+
+    Purpose:
+    - Section for users to sign up for the event
+    - Contains a form for users to input their information, 
+    and a list of other users who have signed up
+
+    --> 
+    <div id="rsvp">
+        <h2>R S V P</h2>
+        <div class="rsvp-container">
+            <div class="rsvp-para">
+                <!-- info goes here -->
+                <p class="dark">We can't wait to celebrate with you!
+                Please let us know if you’ll be joining us for our special day by filling out the RSVP form below. Kindly respond by December 1st!
+                </p>
+                <p class="dark">
+                    With love,
+                </p>
+                <p class="dark">
+                    Timothy & Amber
+                </p>
+            </div>
+            <div class="rsvp-participants">
+                <p class="dark">💐 Uncle Andy from Texas has RSVP'd.</p>
+                <p class="dark">💐 Peter from New Jersey has RSVP'd.</p>
+                <p class="dark">💐 John and Hannah from Virginia has RSVP'd.</p>
+            </div>
+        </div>
+
+        <!--- Sign RSVP Form --->
+        <div class="form-container">
+            <form id="rsvp-form" title="rsvp-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label for="state">Home State:</label>
+                <input type="text" id="state" name="state" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+            </form>
+            <!-- Submit button -->
+            <button id="rsvp-button">Submit RSVP</button>
+        </div>      
+    </div>
+
+
+        
+    <!-- success modal
+
+    Purpose:
+    - Modal that appears when a user successfully signs up for the event
+    - Contains a personalized message and image
+
+    --> 
+
+    <div id="success-modal" class="modal">
+        <div class="modal-container">
+            <div id="modal-message">
+                Thank you for RSVPing! We can't wait to celebrate with you.
+            </div>
+            <div class="modal-image">
+                <img src="img/party.png" alt="Party popper" width="200px">
+            </div>
+        </div>
+    </div>
+
+
+
+        <!-- links
+
+        Purpose:
+        - Links to other resources related to the event
+
+        --> 
+        <h2 id="links">Links</h2>
+
+        <a class="block" href="https://www.amazon.com">
+            <article>
+                <h3>Gift Registry</h3>
+            </article>
+        </a>
+        <a class="block" href="https://www.theknot.com">
+            <article>
+                <h3>RSVP here!</h3>
+            </article>
+        </a>
+            
+        <script src="index.js"></script>
+    </body>
+</html>
